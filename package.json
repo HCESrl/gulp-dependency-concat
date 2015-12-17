@@ -1,13 +1,13 @@
 {
   "name": "gulp-dependency-concat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gulp plugin that injects all passed files to a single lib file",
   "main": "index.js",
   "scripts": {
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "https://github.com/MarcoBoffo/gulp-dependency-concat.git"
   },
   "keywords": [
     "gulp",
