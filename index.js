@@ -17,7 +17,7 @@ module.exports = function(options) {
      * @param callback
      */
     function dependencyConcat(file, encoding, callback) {
-        output += options.prefix + file.relative + options.suffix + '\n';
+        output += options.prefix + file.relative.replace(/\\/g, '/') + options.suffix + '\n'; //windows path convert
         this.push(file);
         return callback();
     }
