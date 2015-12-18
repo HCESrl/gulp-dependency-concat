@@ -1,5 +1,6 @@
 var through = require('through2'),
-    gutil   = require('gulp-util');
+    gutil   = require('gulp-util'),
+    slash   = require('slash');
 
 module.exports = function(options) {
     var output = '//gulp-dependency-concat dynamically generated file, do NOT edit\n';
@@ -17,7 +18,7 @@ module.exports = function(options) {
      * @param callback
      */
     function dependencyConcat(file, encoding, callback) {
-        output += options.prefix + file.relative.replace(/\\/g, '/') + options.suffix + '\n'; //windows path convert
+        output += options.prefix + slash(file.relative) + options.suffix + '\n'; //windows path convert
         this.push(file);
         return callback();
     }
